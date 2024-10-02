@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+   /* Banner Container */
+   .banner {
+    position: absolute; /* Position it at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f9c74f; /* Background color for the banner */
+    color: #000; /* Text color */
+    padding: 10px;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Moving Effect */
+.banner .marquee {
+    display: inline-block;
+    animation: marquee 10s linear infinite; /* Speed of the marquee */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.container {
+    text-align: center;
+}
+.logo {
+    width: 480px;
+    height: 241px;
+    margin-bottom: 20px;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth, slow expand */
+
+}
+.logo.expand {
+    transform: scale(1.2); /* Expands by 20% */
+}
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .logo {
+        width: 300px; /* Adjusted size for tablets */
+        height: auto;
+    }
+    h1 {
+        font-size: 1.5rem; /* Adjust title size on tablets */
+    }
+    p {
+        font-size: 1rem; /* Adjust paragraph size on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 200px; /* Smaller size for mobile */
+        height: auto;
+    }
+    h1 {
+        font-size: 1.2rem; /* Further adjust title size */
+    }
+    p {
+        font-size: 0.9rem; /* Further adjust paragraph size */
+    }
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.2rem;
+    color: #333;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMD On-Top</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <div class="marquee">JMD wishes you a joyful Navratri filled with strength and happiness!</div>
+        </div>
+        <img src="images/jmdlogo.png" alt="Logo" id="logo" class="logo">
+        <h1>Welcomes You!</h1>
+        <p>A place for the 6 best friends</p>
+        <p>Jai Mata Di!</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.getElementById('logo');
+
+            // For desktop (hover effect)
+            logo.addEventListener('mouseenter', function() {
+                logo.classList.add('expand');
+            });
+
+            logo.addEventListener('mouseleave', function() {
+                logo.classList.remove('expand');
+            });
+
+            // For mobile (touch effect)
+            logo.addEventListener('touchstart', function() {
+                logo.classList.toggle('expand');
+            });
+        });
+    </script>
+</body>
+</html>
